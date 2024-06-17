@@ -7,11 +7,12 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useCountries } from "use-react-countries";
 import parsePhoneNumber from "libphonenumber-js";
 
 const Form = () => {
+  const navigate = useNavigate();
   const { formType } = useParams();
   const { countries } = useCountries();
   const [country, setCountry] = useState(0);
@@ -40,6 +41,9 @@ const Form = () => {
       });
       const responseData = await response.json();
       console.log(responseData);
+
+      navigate('/');
+      alert('Success', 'Form submitted successfully');
     } catch (error) {
       console.error(error);
     }

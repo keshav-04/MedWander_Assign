@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.9",
+    "axios": "^1.7.2",
+    "googleapis": "^140.0.0",
     "libphonenumber-js": "^1.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
